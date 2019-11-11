@@ -304,7 +304,7 @@ class LanguageLivePage(Page):
         selected_row = self._components.get_component('keyboard_window_listbox').get_children()[0]
         self._components.get_component('keyboard_window_listbox').select_row(selected_row)
 
-    def long_task(self) -> None:
+    def long_task(self):
         Gdk.threads_enter()
         languages = self._locale_general.available_languages
         languages_keys = list(languages)[0:self.nb_default_languages]
